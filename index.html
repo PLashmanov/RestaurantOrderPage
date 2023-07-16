@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Ordering Page</title>
+        <link rel="stylesheet" href="index.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;900&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <div class = "content-container">
+            <header>
+                <img src="burger.jpg" alt="three burgers on a wooden table"/>
+                <div class="header-text">
+                    <h1>Pasha's Diner</h1>
+                    <h3>The best burgers in town</h3>
+                </div>
+            </header>
+            <main> 
+                <section class="menu" id="menu"></section>
+                <section class="cart-sec hidden" id="cart-sec">
+                    <h2  class="cart-ttl">Your Order</h2>
+                    <div class = "cart"></div>
+                    <div class="cart-total">
+                    <h2>Total</h2>
+                    <h3 class = "total">0</h3>
+                </div>
+                <button class="checkout-btn" id="purchase-btn">Check Out</button>
+                </section> 
+                <section class="payment-sec" id="payment-sec">
+                    <div class="payment-modal">
+                        <h2 class = "modal-title">Enter Payment Details</h2>
+                        <form id="payment-form">
+                            <input 
+                                type="text"
+                                name="fullName"
+                                placeholder="Enter name shown on card"
+                                required
+                                class="card-input"
+                                />
+                            <input 
+                                type="tel"
+                                title="Please enter card number"
+                                name="cardNumber"
+                                placeholder="Enter 16 digits card number"
+                                required
+                                class="card-input"
+                                />
+                            <input 
+                                type="password"
+                                title="Please enter t he 3 digit CVV"
+                                name="cardCvv"
+                                placeholder="Enter card CVV"
+                                required
+                                class="card-input"
+                                />
+                            <button type="submit" class="modal-btn">Submit Payment</button>
+                        </form>
+                    </div>
+                </section>
+                <section class ="order-complete-sec" id="order-complete-sec"></section>
+            </main>
+        </div>
+        <script src="index.js" type="module"></script>
+    </body>
+</html>
